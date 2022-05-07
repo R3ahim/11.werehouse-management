@@ -97,24 +97,28 @@ useEffect(()=>{
             <div>
                 <img style={{width:'500px'}}src={service.img} alt="" />
             </div>
-            <div className='w-100'>
+            <div className='w-100  border px-4 pt-4 pb-5'>
                 <h1>{service.name}</h1>
-                <h2>for your privacey it's the best choice</h2>
-                <h3> seller: {service.subName}</h3>
-                <h4>price: {service.price}$ </h4>
-                <h4>quantity: {service.quantity} </h4>
+               
+                <h5> seller: {service.subName}</h5>
+                <h5>main price: {service.subPrice}</h5>
+                <h5>Quantity price: {service.price}$ </h5>
+                <h5>quantity: {service.quantity} </h5>
                <p className='fs-5'>{service.description}</p>
+               <div className='d-inline'>
+
                <button className='btn btn-primary' onClick={handleQuantity}>Deleverd</button> 
-            </div>
-        </div>
-                  
-        <div className='mx-auto w-50'>
-            <h1>Restoke item</h1>
+               <div className='mx-auto w-25'>
              <form onSubmit={hanldeInputAdd}>
-             <input type="number" name="increaseNumber" id="" />
+             <input className='w-25' type="number" name="increaseNumber" id="" />
             <button type='submit'  className="btn btn-success">Add</button>
              </form>
         </div>
+               </div>
+            </div>
+        </div>
+                  
+      
         </div>
     );
 };

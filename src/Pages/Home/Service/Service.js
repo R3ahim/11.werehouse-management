@@ -55,7 +55,7 @@ const Service = ({service}) => {
             <img className='' src={img} alt="" />
             <h2>{name}</h2>
            <div className='d-flex'>
-           <p className='mx-4 fs-4'>Price: {price}</p> 
+           <p className='mx-4 fs-4'>Price: {subPrice}</p> 
            <p className='mx-3 fs-4'>Quantity: {service.quantity}</p>
            </div>
             <p><small>{description}</small></p>
