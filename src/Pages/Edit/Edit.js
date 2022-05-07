@@ -1,0 +1,83 @@
+import React, { useEffect, useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
+import useServiceDetail from '../../hooks/useServiceDetail';
+
+const Edit = () => {
+    const {id} = useParams(); 
+    const [service] = useServiceDetail(id);
+    const [edit,setEdit] = useState({});
+
+   const handeEditForm =event=>{
+    event.preventDefault() 
+       const updateName = event.target.name.value;
+       const updatupdatSubName = event.target.subname.value;
+       const updatDescription = event.target.description.value;
+       const updatQuantity = event.target.quantity.value;
+       const updatPrice = event.target.price.value;
+       const updatimg = event.target.img.value;
+       const updateData ={
+        name:updateName,
+         price:updatPrice,
+         description:updatDescription,
+         quantity:updatQuantity,
+        subName:updatupdatSubName,
+        img:updatimg,
+         
+           
+       };
+     
+       const url  =` http://localhost:5000/edit/${id} `
+       fetch(url,{
+           method:'PUT',
+           headers:{
+              'content-type': 'application/json'
+           },
+           body:JSON.stringify(updateData)
+       })
+       .then(res=>res.json())
+       .then(data=>{
+           console.log(data);
+           setEdit(data)
+       })
+
+   }
+   
+    return (
+
+        <div className='mx-auto w-50'>
+            <form onSubmit={handeEditForm}>
+  <div className="form-group">
+    <label for="exampleInputEmail1">Name</label>
+    <input type="text"  name='name'className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Change name"/>
+  </div>
+  <div className="form-group">
+    <label for="exampleInputEmail1">SubName address</label>
+    <input type="text" name='subname' className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="change subname"/>
+  </div>
+  <div className="form-group">
+    <label for="exampleInputEmail1">description</label>
+    <input type="text"  name='description'className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter description"/>
+    
+  </div>
+  <div className="form-group">
+    <label for="exampleInputPassword1">quantity</label>
+    <input type="number" name='quantity' className="form-control" id="exampleInputPassword1" placeholder="quantity"/>
+  </div>
+  <div className="form-group">
+    <label for="exampleInputPassword1">price</label>
+    <input type="number"  name='price' className="form-control" id="exampleInputPassword1" placeholder="change the price"/>
+  </div>
+  <div className="form-group">
+    <label for="exampleInputPassword1">Image</label>
+    <input type="text" name='img' className="form-control" id="exampleInputPassword1" placeholder="change you img  url"/>
+  </div>
+  
+  <button  type="submit" className="btn btn-primary mt-5">Submit</button>
+</form>
+  
+            
+        </div>
+    );
+};
+
+export default Edit;

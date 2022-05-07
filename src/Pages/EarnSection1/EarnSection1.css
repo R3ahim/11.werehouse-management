@@ -1,0 +1,10 @@
+.c-color{
+
+}
+
+@media only screen and (max-width:669px) {
+    
+    .c-color{
+        font-size: 30px;
+    }
+}
