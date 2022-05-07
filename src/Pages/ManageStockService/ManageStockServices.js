@@ -3,7 +3,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import useStockService from '../../hooks/userStockService';
-import './ManageServices.css'
+import './ManageStockServices.css'
 
 const ManageServices = () => {
     const [services, setServices] = useStockService();

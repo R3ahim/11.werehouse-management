@@ -4,7 +4,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import axiosPrivate from '../../api/axiosPrivate';
 import auth from '../../firebase.init';
-import './Order.css'
+import './LoveSelect.css'
 const Order = () => {
     const [user] = useAuthState(auth);
     // console.log(user)
