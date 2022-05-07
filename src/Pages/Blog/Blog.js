@@ -15,7 +15,7 @@ const Blog = () => {
             <p>Our daily 50m people read blog and They writes own question and answer </p>
         
             
-        </div>
+    </div>
             <div className='blog-cotnianer'>
                 <div className='quest-contianer'>
                     <h1>WHAT IS DIFFERENT BETWEEN JAVASCRIPT AND NODEJS</h1>

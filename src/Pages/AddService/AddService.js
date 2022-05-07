@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import PageTitle from '../Shared/PageTitle/PageTitle';
 
 const AddService = () => {
     const { register, handleSubmit } = useForm();
@@ -22,8 +23,17 @@ const AddService = () => {
 
 
     return (
-        <div className='w-50 mx-auto'>
-            <h2>Please Add your Product</h2>
+        <div className=''>
+           <PageTitle title="blog"></PageTitle>
+            <div  className='dash-header'>
+            <h2>Add product Earn money</h2>
+            <p>You can earn on this website! buy sell your product </p>
+        
+            
+    </div>
+    <div className='mx-auto w-50'>
+        <h3 className='text-center mb-3'>please add you product</h3>
+        
             <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
                 <div  className='form-group'>
 
@@ -40,6 +50,8 @@ const AddService = () => {
                
                 </div>
             </form>
+            
+    </div>
         </div>
     );
 };
