@@ -33,7 +33,7 @@ const Service = ({service}) => {
          email:user.email,
            
        };
-       const url  =` http://localhost:5000/order/ `
+       const url  =` http://localhost:5000/love `
        fetch(url,{
            method:'POST',
            headers:{

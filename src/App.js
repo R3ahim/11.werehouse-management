@@ -55,7 +55,7 @@ function App() {
            <Edit></Edit>
           </RequireAuth>
         }></Route>
-        <Route path="/orders" element={
+        <Route path="/love" element={
           <RequireAuth>
             <Order></Order>
           </RequireAuth>

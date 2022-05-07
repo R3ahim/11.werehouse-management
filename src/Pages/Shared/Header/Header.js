@@ -48,7 +48,7 @@ const Header = () => {
      
             </a>
           <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-          <Nav.Link className='text-danger' as={Link} to="/orders">  <i class="fas fa-heart text-danger"></i> loved </Nav.Link>
+          <Nav.Link className='text-danger' as={Link} to="/love">  <i class="fas fa-heart text-danger"></i> loved </Nav.Link>
 
             <li><a className="dropdown-item" href="#">Another action</a></li>
             <li><hr className="dropdown-divider"/></li>

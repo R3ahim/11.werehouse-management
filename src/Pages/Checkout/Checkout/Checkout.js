@@ -25,7 +25,7 @@ const Checkout = () => {
             phone: event.target.phone.value,
             quantity: event.target.quantity.value
         }
-        axios.post('http://localhost:5000/order', order)
+        axios.post('http://localhost:5000/love', order)
         .then(response =>{
             const {data} = response;
             if(data.insertedId){
