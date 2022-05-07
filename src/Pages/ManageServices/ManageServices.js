@@ -1,10 +1,15 @@
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
+import auth from '../../firebase.init';
 import useStockService from '../../hooks/userStockService';
 import './ManageServices.css'
 
 const ManageServices = () => {
     const [services, setServices] = useStockService();
+    const [user] = useAuthState(auth)
+    const emailStockServis = services.filter(service => service.email===user.email)
+   
     const navigate = useNavigate()
 const navigateEdit = id =>{
         navigate(`/edit/${id}`)
@@ -37,9 +42,10 @@ const navigateEdit = id =>{
                           
               <div className="row">
               <div className="services-container">
+            
 
         {
-            services.map(manageInv=> 
+            emailStockServis.map(manageInv=> 
            
          
             <div className='service'>
