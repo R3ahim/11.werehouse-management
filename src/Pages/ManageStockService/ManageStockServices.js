@@ -6,9 +6,9 @@ import useStockService from '../../hooks/userStockService';
 import './ManageStockServices.css'
 
 const ManageServices = () => {
-    const [services, setServices] = useStockService();
+    const [stockServices, setstockServices] = useStockService();
     const [user] = useAuthState(auth)
-    const emailStockServis = services.filter(service => service.email===user.email)
+    const emailStockServis = stockServices.filter(service => service.email===user.email)
    
     const navigate = useNavigate()
 const navigateEdit = id =>{
@@ -24,8 +24,8 @@ const navigateEdit = id =>{
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                const remaining = services.filter(service => service._id !== id);
-                setServices(remaining);
+                const remaining = stockServices.filter(service => service._id !== id);
+                setstockServices(remaining);
             })
         }
     }

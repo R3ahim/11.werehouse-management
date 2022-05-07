@@ -1,17 +1,17 @@
 import { useEffect, useState } from "react";
 
 const useServiceDetail = serviceId =>{
-    const [service, setService] = useState({});
+    const [stockService, setStockService] = useState({});
 
     useEffect( () =>{
         const url = `http://localhost:5000/stockService/${serviceId}`;
         console.log(url);
         fetch(url)
         .then(res=> res.json())
-        .then(data => setService(data));
+        .then(data => setStockService(data));
 
     }, [serviceId]);
-    return [service]
+    return [stockService]
 }
 
 export default useServiceDetail;

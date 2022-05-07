@@ -8,7 +8,7 @@ import PageTitle from '../Shared/PageTitle/PageTitle';
 const Blog = () => {
     return (
         <div>
-               
+            
             <PageTitle title="blog"></PageTitle>
             <div  className='dash-header'>
             <h2>Daily Treeding blog</h2>

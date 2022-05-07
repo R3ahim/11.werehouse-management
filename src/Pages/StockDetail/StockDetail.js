@@ -5,25 +5,25 @@ import useServiceDetail from '../../hooks/useServiceDetail';
 
 const StockDetail = () => {
     const {serviceId} = useParams(); 
-const [service] = useServiceDetail(serviceId);
+const [stockService] = useServiceDetail(serviceId);
 const [stock,setStock ] = useState({});
 const [quantyty,setQuantity]=useState(0)
 
 
 
 const handleQuantity =()=>{
-     const updateQuantity = service.quantity - 1;
-     const price = updateQuantity * service.subPrice;
-      service.price = price
-     service.quantity = updateQuantity;
+     const updateQuantity = stockService.quantity - 1;
+     const price = updateQuantity * stockService.subPrice;
+     stockService.price = price
+     stockService.quantity = updateQuantity;
      const updateData = {
-         name:service.name ,
-         price:service.price,
-         description:service.description,
-         quantity:service.quantity,
+         name:stockService.name ,
+         price:stockService.price,
+         description:stockService.description,
+         quantity:stockService.quantity,
       
-        subName:service.subName,
-        img:service.img
+        subName:stockService.subName,
+        img:stockService.img
          
      }
      console.log(updateData)
@@ -48,18 +48,18 @@ const handleQuantity =()=>{
 }
 const hanldeInputAdd = (event)=>{
   event.preventDefault() 
-  const updateQuantity =parseFloat( event.target.increaseNumber.value) + parseFloat(service.quantity) ;
-  const price = updateQuantity * service.subPrice;
-  service.price = price
+  const updateQuantity =parseFloat( event.target.increaseNumber.value) + parseFloat(stockService.quantity) ;
+  const price = updateQuantity * stockService.subPrice;
+  stockService.price = price
 
-  service.quantity = updateQuantity;
+  stockService.quantity = updateQuantity;
   const updateData = {
-      name:service.name ,
-      price:service.price,
-      description:service.description,
-      quantity:service.quantity,
-     subName:service.subName,
-     img:service.img
+      name:stockService.name ,
+      price:stockService.price,
+      description:stockService.description,
+      quantity:stockService.quantity,
+     subName:stockService.subName,
+     img:stockService.img
       
   }
   console.log(updateData)
@@ -95,16 +95,16 @@ useEffect(()=>{
     <div>
         <div className='d-flex align-items-center justify-content-center'>
             <div>
-                <img style={{width:'500px'}}src={service.img} alt="" />
+                <img style={{width:'500px'}}src={stockService.img} alt="" />
             </div>
             <div className='w-100  border px-4 pt-4 pb-5'>
-                <h1>{service.name}</h1>
+                <h1>{stockService.name}</h1>
                
-                <h5> seller: {service.subName}</h5>
-                <h5>main price: {service.subPrice}</h5>
-                <h5>Quantity price: {service.price}$ </h5>
-                <h5>quantity: {service.quantity} </h5>
-               <p className='fs-5'>{service.description}</p>
+                <h5> seller: {stockService.subName}</h5>
+                <h5>main price: {stockService.subPrice}</h5>
+                <h5>Quantity price: {stockService.price}$ </h5>
+                <h5>quantity: {stockService.quantity} </h5>
+               <p className='fs-5'>{stockService.description}</p>
                <div className='d-inline'>
 
                <button className='btn btn-primary' onClick={handleQuantity}>Deleverd</button> 

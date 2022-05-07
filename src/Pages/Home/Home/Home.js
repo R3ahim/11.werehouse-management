@@ -4,7 +4,7 @@ import EarnSection from '../../EarnSection1/EarnSection';
 import PageTitle from '../../Shared/PageTitle/PageTitle';
 import Banner from '../Banner/Banner';
 
-import Services from '../Services/Services';
+import Services from '../StockServices/StockServices';
 import './Home.css'
 
 const Home = () => {

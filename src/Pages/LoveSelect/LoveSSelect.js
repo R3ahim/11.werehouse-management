@@ -34,7 +34,7 @@ const Order = () => {
     }, [])
     return (
         <div className='w-50 mx-auto'>
-            <h2>Your orders: {orders.length}</h2>
+    <h2>Your orders: {orders.length}</h2>
             {
                 orders.map(boxLove =><div key={boxLove._id}>
                       <div className='review-item'>
