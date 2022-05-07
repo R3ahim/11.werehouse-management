@@ -4,7 +4,6 @@ import './App.css';
 import About from './Pages/About/About';
 import AddService from './Pages/AddService/AddService';
 import Blog from './Pages/Blog/Blog';
-import Checkout from './Pages/Checkout/Checkout/Checkout';
 import Edit from './Pages/Edit/Edit';
 import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Login/Login/Login';
@@ -33,11 +32,7 @@ function App() {
           <StockDetail></StockDetail>
         </RequireAuth>
       }></Route>        
-        <Route path="/checkout/:serviceId" element={
-          <RequireAuth>
-            <Checkout></Checkout>
-          </RequireAuth>
-        }></Route>
+       
         <Route path="/addservice" element={
           <RequireAuth>
             <AddService></AddService>
