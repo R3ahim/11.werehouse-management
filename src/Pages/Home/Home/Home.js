@@ -14,7 +14,7 @@ const Home = () => {
             <Banner></Banner>
             <Services></Services>
             <BetterbuildSection></BetterbuildSection>
-            <h1 className='text-center mt-5 res-text mb-2'>Hwo to earn Money on this website</h1>
+            <h1 className='text-center mt-5 res-text mb-2'>How to earn Money on this website</h1>
             <EarnSection></EarnSection>
            
         </>

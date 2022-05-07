@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import useServiceDetail from '../../hooks/useServiceDetail';
 
 const Edit = () => {
@@ -9,6 +10,7 @@ const Edit = () => {
 
    const handeEditForm =event=>{
     event.preventDefault() 
+    toast('Edit susccesfull')
        const updateName = event.target.name.value;
        const updatupdatSubName = event.target.subname.value;
        const updatDescription = event.target.description.value;
