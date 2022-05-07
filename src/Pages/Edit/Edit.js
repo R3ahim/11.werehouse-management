@@ -62,7 +62,7 @@ const Edit = () => {
     
   </div>
   <div className="form-group">
-    <label for="exampleInputPassword1">quantity</label>
+    <label for="exampleInputPassword1">Quantity</label>
     <input type="number" name='quantity' className="form-control" id="exampleInputPassword1" placeholder="quantity"/>
   </div>
   <div className="form-group">
