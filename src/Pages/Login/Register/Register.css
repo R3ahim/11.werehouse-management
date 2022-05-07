@@ -1,6 +1,6 @@
 *
 {
-    box1-sizing: border-box1;
+    box-sizing: border-box1;
 }
 
 .container-fluid
@@ -61,7 +61,7 @@
     background: transparent;
     font-size: 16px;
     padding-left: 10px;
-    box1-sizing: border-box1;
+    box-sizing: border-box1;
     display: inline-block;
 }
 

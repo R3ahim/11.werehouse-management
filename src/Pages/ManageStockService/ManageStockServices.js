@@ -17,7 +17,7 @@ const navigateEdit = id =>{
     const handleDelete = id =>{
         const proceed = window.confirm('Are you sure?');
         if(proceed){
-            const url = `http://localhost:5000/stockService/${id}`;
+            const url = `https://lit-inlet-45861.herokuapp.com/stockService/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

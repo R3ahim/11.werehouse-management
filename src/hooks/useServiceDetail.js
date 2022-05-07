@@ -4,7 +4,7 @@ const useServiceDetail = serviceId =>{
     const [stockService, setStockService] = useState({});
 
     useEffect( () =>{
-        const url = `http://localhost:5000/stockService/${serviceId}`;
+        const url = `https://lit-inlet-45861.herokuapp.com/stockService/${serviceId}`;
         console.log(url);
         fetch(url)
         .then(res=> res.json())

@@ -7,7 +7,7 @@ const Services = () => {
     const [services, setServices] = useState([]);
 
     useEffect( ()=>{
-        fetch('http://localhost:5000/stockService')
+        fetch('https://lit-inlet-45861.herokuapp.com/stockService')
         .then(res => res.json())
         .then(data => setServices(data));
     }, [])
@@ -19,7 +19,7 @@ const Services = () => {
               
             
             <div className="row">
-            <h1 className=' text-center mt-5'> Our Services</h1>
+            <h1 className=' text-center mt-5'>Trending Products</h1>
             <div className="services-container">
             {
                 sliceStockService.map(service => <Service

@@ -15,7 +15,7 @@ const Order = () => {
         
         const getOrders = async() =>{
             const email = user?.email;
-            const url = `http://localhost:5000/love?email=${email}`;
+            const url = `https://lit-inlet-45861.herokuapp.com/love?email=${email}`;
             console.log(url);
             try{
                 const {data} = await axiosPrivate.get(url);

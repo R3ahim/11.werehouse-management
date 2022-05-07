@@ -33,7 +33,7 @@ const Service = ({service}) => {
          email:user.email,
            
        };
-       const url  =` http://localhost:5000/love `
+       const url  =` https://lit-inlet-45861.herokuapp.com/love `
        fetch(url,{
            method:'POST',
            headers:{
@@ -58,6 +58,7 @@ const Service = ({service}) => {
            <p className='mx-4 fs-4'>Price: {subPrice}</p> 
            <p className='mx-3 fs-4'>Quantity: {service.quantity}</p>
            </div>
+           <p>Contract: {service.email}</p>
             <p><small>{description}</small></p>
           <div>
             <button onClick={() => navigateToServiceDetail(_id)} className='btn btn-primary'>Update</button>

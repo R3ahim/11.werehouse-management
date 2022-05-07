@@ -58,7 +58,7 @@ const Register = () => {
             { errorElement}
         <div className="box1 ">
 
-            <h3 className='h3'>SIGN UP</h3>
+            <h3 className='h3'>REGISTER NOW</h3>
                 <form onSubmit={handleRegister}>
                 <div className="inputbox">
                   <input type="text" name="name" placeholder="name" />
@@ -78,7 +78,7 @@ const Register = () => {
                      
              </div>
 
-         <div className="box2">
+         <div className="box12">
         
             <SocialLogin></SocialLogin>
 

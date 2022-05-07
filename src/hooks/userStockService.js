@@ -4,7 +4,7 @@ const useStockService = () =>{
     const [stockServices, setStockServices] = useState([]);
 
     useEffect( ()=>{
-        fetch('http://localhost:5000/stockService')
+        fetch('https://lit-inlet-45861.herokuapp.com/stockService')
         .then(res => res.json())
         .then(data => setStockServices(data));
     }, []);

@@ -10,7 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import PageTitle from '../../Shared/PageTitle/PageTitle';
 import axios from 'axios';
 import useToken from '../../../hooks/useToken.js';
-
+import './Login.css'
 
 const Login = () => {
     const emailRef = useRef('');
@@ -49,10 +49,7 @@ const Login = () => {
         await signInWithEmailAndPassword(email, password);
     }
 
-    const navigateRegister = event => {
-        navigate('/register');
-    }
-
+ 
     const resetPassword = async (event) => {
         const email = event.target.email.value;
         if (email) {
@@ -77,11 +74,11 @@ const Login = () => {
         
         <div className="inputbox">
         <input type="email" name="email"  placeholder="email"/>
-            <span><i className="fa fa-lock" aria-hidden="true"></i></span>
         </div>
         <div className="inputbox">
             <input type="password" name="password" placeholder=" Password"/>
-            <span><i className="fa fa-lock" aria-hidden="true"></i></span>
+            
+            <p><small><button className='forgetpassword' onClick={resetPassword}>Forget password</button></small></p>
         </div>
     
      <div className="inputbox">

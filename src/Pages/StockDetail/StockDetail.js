@@ -30,7 +30,7 @@ const handleQuantity =()=>{
     
   
     setQuantity(updateQuantity);
-    const url  =` http://localhost:5000/stock/${serviceId} `
+    const url  =` https://lit-inlet-45861.herokuapp.com/stock/${serviceId} `
     fetch(url,{
         method:'PUT',
         headers:{
@@ -66,7 +66,7 @@ const hanldeInputAdd = (event)=>{
  
 
  setQuantity(updateQuantity);
- const url  =` http://localhost:5000/stock/${serviceId} `
+ const url  =` https://lit-inlet-45861.herokuapp.com/stock/${serviceId} `
  fetch(url,{
      method:'PUT',
      headers:{
@@ -83,7 +83,7 @@ const hanldeInputAdd = (event)=>{
 
 
 useEffect(()=>{
-    const url  =` http://localhost:5000/stock/${serviceId}`
+    const url  =` https://lit-inlet-45861.herokuapp.com/stock/${serviceId}`
     fetch(url)
     .then(res=>res.json())
     .then(data=>setStock(data))

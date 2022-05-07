@@ -7,7 +7,7 @@ const AddService = () => {
     
     const onSubmit = data => {
         console.log(data);
-        const url = `http://localhost:5000/stockService`;
+        const url = `https://lit-inlet-45861.herokuapp.com/stockService`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -27,7 +27,7 @@ const AddService = () => {
            <PageTitle title="blog"></PageTitle>
             <div  className='dash-header'>
             <h2>Add product Earn money</h2>
-            <p>You can earn on this website! buy sell your product </p>
+            <p>You can earn on this website <span className='text-danger'>!</span> buy sell your product </p>
         
             
     </div>

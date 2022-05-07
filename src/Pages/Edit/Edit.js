@@ -33,7 +33,7 @@ const Edit = () => {
            
       };
      
-       const url  =` http://localhost:5000/edit/${id} `
+       const url  =` https://lit-inlet-45861.herokuapp.com/edit/${id} `
        fetch(url,{
            method:'PUT',
            headers:{
