@@ -5,7 +5,7 @@ import useServiceDetail from '../../hooks/useServiceDetail';
 
 const Edit = () => {
     const {id} = useParams(); 
-    const [service] = useServiceDetail(id);
+
     const [edit,setEdit] = useState({});
 
    const handeEditForm =event=>{
@@ -18,12 +18,12 @@ const Edit = () => {
        const updatPrice = event.target.price.value;
        const updatimg = event.target.img.value;
        const updateData ={
-        name:updateName,
+         name:updateName,
          price:updatPrice,
          description:updatDescription,
          quantity:updatQuantity,
         subName:updatupdatSubName,
-        img:updatimg,
+        img:updatimg
          
            
        };
