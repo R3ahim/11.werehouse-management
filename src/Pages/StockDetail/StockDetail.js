@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { ToastBody } from 'react-bootstrap';
 import { set } from 'react-hook-form';
 import { useParams } from 'react-router-dom';
 import useServiceDetail from '../../hooks/useServiceDetail';
@@ -9,7 +8,7 @@ const StockDetail = () => {
 const [service] = useServiceDetail(serviceId);
 const [stock,setStock ] = useState({});
 const [quantyty,setQuantity]=useState(0)
-const [inCreaseQuantit , setinCreaseQuantit] = useState(0)
+
 
 
 const handleQuantity =()=>{
