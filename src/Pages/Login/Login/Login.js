@@ -8,14 +8,13 @@ import SocialLogin from '../SocialLogin/SocialLogin';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import PageTitle from '../../Shared/PageTitle/PageTitle';
-import axios from 'axios';
+
 import useToken from '../../../hooks/useToken.js';
 import './Login.css'
 
 const Login = () => {
     <PageTitle title={'Login'}></PageTitle>
-    const emailRef = useRef('');
-    const passwordRef = useRef('');
+   
     const navigate = useNavigate();
     const location = useLocation();
 

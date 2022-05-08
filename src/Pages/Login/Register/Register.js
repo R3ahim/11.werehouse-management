@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useCreateUserWithEmailAndPassword, useSendEmailVerification, useUpdateProfile } from 'react-firebase-hooks/auth';
 import './Register.css';
 import auth from '../../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import Loading from '../../Shared/Loading/Loading';
 import useToken from '../../../hooks/useToken.js';
 import './Register.css'
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
     
@@ -16,13 +18,17 @@ const Register = () => {
         loading,
         error,
     ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
+    const [sendEmailVerification, sending, error1] = useSendEmailVerification( auth);
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
     const [token] = useToken(user);
     const navigate = useNavigate();
+    const location = useLocation();
+    let from = location.state?.from?.pathname || '/';
 
-    const navigateLogin = () => {
-        navigate('/login');
-    }
+if (user) {
+    navigate(from, { replace: true });
+}
+
     // console.log(error);
 
     if(loading || updating){
@@ -74,7 +80,10 @@ const Register = () => {
                 </div>
             
              <div className="inputbox">
-               <button type="submit" name="FINISH" value="submit">Submit</button>
+             <button  onClick={ async () => {
+                    await sendEmailVerification();
+                    toast('Sent email')
+                }} type="submit" className="btn btn-primary">Submit</button>
                      
              </div>
 

@@ -32,40 +32,52 @@ const navigateEdit = id =>{
  
     return (
 
-        <div id="services" className='container'>
- <div  className='dash-header'>
+        <div className='container fluid'>
+            <div>
+            <div  className='dash-header'>
             <h2>Daily Treeding info</h2>
             <p>Our daily order minimum 50m car. it is the biggest achimnet for us </p>
             <p>Its the begest car company ever in the world</p>
             <Link to={'/addservice'}><button className='btn btn-primary'>Add a More items</button></Link>
         </div>
-                          
-              <div className="row">
-              <div className="services-container">
-            
+            </div>
+            <div className='mx-auto'>
+                
+            <table class="table">
+                <thead>
 
-        {
-            emailStockServis.map(manageInv=> 
-           
-         
-            <div className='service'>
-        <img className='img-mange' src={manageInv.img} alt="" />
-        <h2>{manageInv.name}</h2>
-        <div className='d-flex'>
-           <p className='mx-4 fs-4'>Price: {manageInv.subPrice}</p> 
-           <p className='mx-3 fs-4'>Quantity: {manageInv.quantity}</p>
-           </div>
-           <p>Contract: {manageInv.email}</p>
-            <p><small>{manageInv.description}</small></p>
-        <button onClick={()=>navigateEdit(manageInv._id)}  className='btn btn-primary'>Edit</button>
-        <button onClick={() => handleDelete(manageInv._id)}  className='btn btn-danger mx-2'>Dellete</button>
-    </div>
-          
-           )
-        }
+        <tr>
+              <th scope="col">Img</th>
+              <th scope="col">Prroduct Name</th>
+              <th scope="col">Email</th>
+            
+              <th scope="col">Quantity</th>
+              <th scope="col">Price</th>
+              <th scope='col'>Total</th>
+              <th scope='col'>Suplayer</th>
+              <th scope='col'>options</th>
+        </tr>
+                </thead>
+      {
+          stockServices.map(stockServic=><tbody>
+            <tr>
+              <td ><img width={40} src={stockServic.img} alt="" /></td>
+              <td >{stockServic.name}</td>
+              <td >{stockServic.email}</td>
+              <td >{stockServic.quantity}</td>
+              <td >{stockServic.subPrice}</td>
+              <td >{stockServic.price}</td>
+              <td >{stockServic.subName}</td>
+              <td ><div> <button onClick={()=>navigateEdit(stockServic._id)}  className='btn btn-primary'>Edit</button>
+        <button onClick={() => handleDelete(stockServic._id)}  className='btn btn-danger mx-2'>Dellete</button></div></td>
+            </tr>
+          </tbody>
+)}
+  
+  </table>
         </div>
+        
         </div>
-    </div>
     );
 };
 

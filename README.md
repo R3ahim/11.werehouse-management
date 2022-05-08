@@ -10,3 +10,8 @@ on this website to created by react  and vanila css bootsrap and react-bootsrap,
 
 ## Home section
 On this home section we create banner and stockServices or bettterBuildsection and earnMoney on this webste . banner section have btn if click this btn you will be navigate stockservices on thisr website
+
+
+## add inventories 
+add invetoris has you can add invetirsi and earn money on to add and seel you product
+

@@ -15,6 +15,8 @@ import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
 import NotFound from './Pages/Shared/NotFound/NotFound';
 import StockDetail from './Pages/StockDetail/StockDetail';
+import MyItems from './Pages/MyItems/MyItems';
+import RequestionAuth from './Pages/Login/RequireAuth/RequestionAuth';
 
 function App() {
   return (
@@ -48,10 +50,15 @@ function App() {
            <Edit></Edit>
           </RequireAuth>
         }></Route>
-        <Route path="/love" element={
+        <Route path="/myItems" element={
           <RequireAuth>
-            <LoveSSelect></LoveSSelect>
+         <MyItems></MyItems>
           </RequireAuth>
+        }></Route>
+        <Route path="/love" element={
+          <RequestionAuth>
+            <LoveSSelect></LoveSSelect>
+          </RequestionAuth>
         }></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
