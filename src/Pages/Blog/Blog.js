@@ -42,7 +42,9 @@ The Java script language follows the standard of the Java programming language, 
                 </div>
                 <h2>Answer: </h2>  
                 <p>
-               JWT means (JSON WEB TOKEN) 
+               JWT means (JSON WEB TOKEN) .A JSON Web Token (JWT, pronounced "jot") is a token that has some information about the user included. This information is "signed" rather than "encrypted", which means that it can be read by the browser, but not edited. 
+                JWT provide mainly security for web applications, but can be used and for storing and exchanging session related information between the client and the server.
+JWT consist of several parts, which are decoded and used by the client. They have several benefits over cookies,
                 </p>
             </div>
             <div className='blog-cotnianer'>
