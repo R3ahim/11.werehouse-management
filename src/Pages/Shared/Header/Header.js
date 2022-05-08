@@ -30,8 +30,9 @@ const Header = () => {
 
                             {
                                 user && <>
-                                <Nav.Link as={Link} to="addservice">Add</Nav.Link>
-                                <Nav.Link as={Link} to="/manage">Manage</Nav.Link>
+                                <Nav.Link as={Link} to="addservice">Add Inventories</Nav.Link>
+                                <Nav.Link as={Link} to="/love">  <i class="fas text-danger fa-heart text-danger"></i>Loved Items </Nav.Link>
+                                <Nav.Link as={Link} to="/manage">MnageItems</Nav.Link>
                                 </>
                             }
                         </Nav>
@@ -48,9 +49,9 @@ const Header = () => {
      
             </a>
           <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-          <Nav.Link className='text-danger' as={Link} to="/love">  <i class="fas fa-heart text-danger"></i> loved </Nav.Link>
+          
 
-            <li><a className="dropdown-item" href="#">Another action</a></li>
+            <li><Link className='text-decoration-none text-dark' to={'/addservice'}>ManageInventories</Link></li>
             <li><hr className="dropdown-divider"/></li>
             <li>< button className='btn bg-danger text-white btn-link  text-decoration-none' onClick={handleSignOut}>Log out</button></li>
           </ul>

@@ -1,5 +1,6 @@
 import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
+import { PageItem } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import axiosPrivate from '../../api/axiosPrivate';
@@ -39,8 +40,15 @@ const Order = () => {
 
     }, [])
     return (
+        <div>
+                 <PageTitle title="blog"></PageTitle>
+            <div  className='dash-header'>
+            <h2>Loved Item</h2>
+            <p>What you loved home you can see there! it's the speacial futurue our gold user </p>
+            </div>
+      
         <div className='w-50 mx-auto'>
-    <h2>Your loveOrders: {loveOrders.length}</h2>
+   
             {
                 loveOrdersFilter.map(boxLove =><div key={boxLove._id}>
                       <div className='review-item'>
@@ -61,6 +69,7 @@ const Order = () => {
         </div>
                 </div>)
             }
+        </div>
         </div>
     );
 };

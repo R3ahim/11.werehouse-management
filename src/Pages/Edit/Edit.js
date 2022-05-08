@@ -5,6 +5,7 @@ import useServiceDetail from '../../hooks/useServiceDetail';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 
+import 'react-toastify/dist/ReactToastify.css';
 const Edit = () => {
     const {id} = useParams(); 
     const [user] = useAuthState(auth)
@@ -58,8 +59,8 @@ const Edit = () => {
     <input type="text"  name='name'className="form-control" required id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Change name"/>
   </div>
   <div className="form-group">
-    <label for="exampleInputEmail1">SubName address</label>
-    <input type="text" name='subname' className="form-control" required id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="change subname"/>
+    <label for="exampleInputEmail1">Sublayer  name</label>
+    <input type="text" name='subname' className="form-control" required id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="change suplayer name"/>
   </div>
   <div className="form-group">
     <label for="exampleInputEmail1">description</label>

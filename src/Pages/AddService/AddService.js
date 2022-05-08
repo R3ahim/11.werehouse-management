@@ -1,11 +1,14 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import { toast } from 'react-toastify';
 import PageTitle from '../Shared/PageTitle/PageTitle';
+import 'react-toastify/dist/ReactToastify.css';
 
 const AddService = () => {
     const { register, handleSubmit } = useForm();
     <PageTitle title={'AddStockService'}></PageTitle>
     const onSubmit = data => {
+
         console.log(data);
         const url = `https://lit-inlet-45861.herokuapp.com/stockService`;
         fetch(url, {
@@ -19,6 +22,7 @@ const AddService = () => {
         .then(result =>{
             console.log(result);
         } )
+        toast('added successfull')
     };
 
 

@@ -127,15 +127,10 @@
 
 
 
-/* .box12 button[type="submit"]
-{
-    border:2px solid white;
-    border-radius:30px;
-    display: inline-block;
-    text-align: center;
-    background-color: transparent;
-    margin-top: 15px;
-    margin-left:120px;
-    color: white;
-    font-size: 12px;
-} */
+
+@media only screen and (max-width:668px) {
+    .box12{
+       float: inline-start;
+       width: 300px;
+    }
+}

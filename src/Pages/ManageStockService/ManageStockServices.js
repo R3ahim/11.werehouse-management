@@ -51,8 +51,12 @@ const navigateEdit = id =>{
             <div className='service'>
         <img className='img-mange' src={manageInv.img} alt="" />
         <h2>{manageInv.name}</h2>
-        <p>Price: {manageInv.subPrice}</p>
-        <p><small>{manageInv.description}</small></p>
+        <div className='d-flex'>
+           <p className='mx-4 fs-4'>Price: {manageInv.subPrice}</p> 
+           <p className='mx-3 fs-4'>Quantity: {manageInv.quantity}</p>
+           </div>
+           <p>Contract: {manageInv.email}</p>
+            <p><small>{manageInv.description}</small></p>
         <button onClick={()=>navigateEdit(manageInv._id)}  className='btn btn-primary'>Edit</button>
         <button onClick={() => handleDelete(manageInv._id)}  className='btn btn-danger mx-2'>Dellete</button>
     </div>

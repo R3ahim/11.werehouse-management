@@ -9,7 +9,7 @@ import useToken from '../../../hooks/useToken.js';
 import './Register.css'
 
 const Register = () => {
-    const [agree, setAgree] = useState(false);
+    
     const [
         createUserWithEmailAndPassword,
         user,
@@ -78,12 +78,12 @@ const Register = () => {
                      
              </div>
 
-         <div className="box12">
-        
-            <SocialLogin></SocialLogin>
-
-         </div>
        
+             <div className="box12">
+        
+        <SocialLogin></SocialLogin>
+
+     </div>
         </form>    
 </div>  
 </div>
