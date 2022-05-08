@@ -10,8 +10,7 @@ const About = () => {
             <PageTitle title="About"></PageTitle>
             <div  className='dash-header'>
             <h2>About us</h2>
-            <p className='fs-5'>Our daily order minimum 50m car. it is the biggest achimnet for us </p>
-            <p>Its the begest car company ever in the world</p>
+            <p className='fs-5'>Our Dailay add product like 50m people stock her product on our webstie</p>
             
         </div>
             <div className='about'  >

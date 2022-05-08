@@ -35,9 +35,9 @@ const navigateEdit = id =>{
         <div className='container fluid'>
             <div>
             <div  className='dash-header'>
-            <h2>Daily Treeding info</h2>
-            <p>Our daily order minimum 50m car. it is the biggest achimnet for us </p>
-            <p>Its the begest car company ever in the world</p>
+            <h2>All products</h2>
+            <p>You cna mange your product who added on this website </p>
+          
             <Link to={'/addservice'}><button className='btn btn-primary'>Add a More items</button></Link>
         </div>
             </div>

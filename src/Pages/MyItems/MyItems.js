@@ -9,10 +9,7 @@ const MyItems = () => {
     const [user] = useAuthState(auth)
     const emailStockServis = stockServices.filter(service => service.email===user.email)
    
-    const navigate = useNavigate()
-const navigateEdit = id =>{
-        navigate(`/edit/${id}`)
-    }
+
     const handleDelete = id =>{
         const proceed = window.confirm('Are you sure?');
         if(proceed){
@@ -31,9 +28,9 @@ const navigateEdit = id =>{
     return (
         <div id="services" className='container'>
  <div  className='dash-header'>
-            <h2>Daily Treeding info</h2>
-            <p>Our daily order minimum 50m car. it is the biggest achimnet for us </p>
-            <p>Its the begest car company ever in the world</p>
+            <h2>Your items </h2>
+            <p>How much product you have added on this product</p>
+      
             
         </div>
                           
@@ -52,10 +49,10 @@ const navigateEdit = id =>{
            <p className='mx-4 fs-4'>Price: {manageInv.subPrice}</p> 
            <p className='mx-3 fs-4'>Quantity: {manageInv.quantity}</p>
            </div>
-           <p>Contract: {manageInv.email}</p>
+           
             <p><small>{manageInv.description}</small></p>
-        <button onClick={()=>navigateEdit(manageInv._id)}  className='btn btn-primary'>Edit</button>
-        <button onClick={() => handleDelete(manageInv._id)}  className='btn btn-danger mx-2'>Dellete</button>
+        
+        <button onClick={() => handleDelete(manageInv._id)}  className='btn btn-danger mx-2'>Trash to My Items</button>
     </div>
           
            )

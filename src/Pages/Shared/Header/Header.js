@@ -32,12 +32,13 @@ const Header = () => {
                         <Nav className="me-auto">
                             
                             <Nav.Link as={Link} to={'/home'}  >Home</Nav.Link>
+                            <Nav.Link as={Link} to="/manage">Mange Items</Nav.Link>
+                            <Nav.Link as={Link} to="addservice">Add Inventories</Nav.Link>
 
                             {
                                 user && <>
                                 <Nav.Link as={Link} to="addservice">Add Inventories</Nav.Link>
                                 <Nav.Link as={Link} to="/love">  <i class="fas text-danger fa-heart text-danger"></i>Loved Items </Nav.Link>
-                                <Nav.Link as={Link} to="/manage">Mnage Items</Nav.Link>
                                 <Nav.Link as={Link} to="/myItems">My items</Nav.Link>
 
                                 </>
@@ -57,8 +58,8 @@ const Header = () => {
             </a>
           <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
           
-             <li><button onClick={handleDarkmode}>Dark mode</button></li>
             <li><Link className='text-decoration-none text-dark' to={'/addservice'}>ManageInventories</Link></li>
+             <li><button className='btn btn-dark' onClick={handleDarkmode}>Dark mode</button></li>
             <li><hr className="dropdown-divider"/></li>
             <li>< button className='btn bg-danger text-white btn-link  text-decoration-none' onClick={handleSignOut}>Log out</button></li>
           </ul>

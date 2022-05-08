@@ -15,3 +15,20 @@ On this home section we create banner and stockServices or bettterBuildsection a
 ## add inventories 
 add invetoris has you can add invetirsi and earn money on to add and seel you product
 
+## love items 
+
+home or root page stockSericies card have love btn .if you click this love btn. those you click loveed you will see lvoe items
+
+## mangeItems 
+mangeitems have a table . this table you can see all  prodcuts in this website and you can edit and dellete product if you login 
+
+## myItems 
+my items is what you added product and stock product on our website you can see you product on here and delete added product and edit
+
+## your profile logo
+if you click this profile logo you can a dropdown navbar . there will be (dark mode , logout btn)
+
+## dark mode 
+if you click this btn you can see all body will be going to dark mode
+## log out btn 
+log btn for if you want log out you can click this btn
