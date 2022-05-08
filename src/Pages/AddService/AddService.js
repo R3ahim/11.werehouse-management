@@ -4,7 +4,7 @@ import PageTitle from '../Shared/PageTitle/PageTitle';
 
 const AddService = () => {
     const { register, handleSubmit } = useForm();
-    
+    <PageTitle title={'AddStockService'}></PageTitle>
     const onSubmit = data => {
         console.log(data);
         const url = `https://lit-inlet-45861.herokuapp.com/stockService`;

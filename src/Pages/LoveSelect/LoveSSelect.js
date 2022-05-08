@@ -4,22 +4,28 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import axiosPrivate from '../../api/axiosPrivate';
 import auth from '../../firebase.init';
+import PageTitle from '../Shared/PageTitle/PageTitle';
 import './LoveSelect.css'
 const Order = () => {
+    <PageTitle title={'loveSelected'}></PageTitle>
     const [user] = useAuthState(auth);
     // console.log(user)
-    const [orders, setOrders] = useState([]);
-    console.log(orders)
+    const [loveOrders, setloveOrders] = useState([]);
+    console.log(loveOrders);
+    const loveOrdersFilter = loveOrders.filter(loveOrder=>loveOrder.email === user.email);
+    // console.log(loveOrdersFilter);
+    
+  
     const navigate = useNavigate();
     useEffect( () => {
         
-        const getOrders = async() =>{
+        const getloveOrders = async() =>{
             const email = user?.email;
             const url = `https://lit-inlet-45861.herokuapp.com/love?email=${email}`;
             console.log(url);
             try{
                 const {data} = await axiosPrivate.get(url);
-                setOrders(data);
+                setloveOrders(data);
             }
             catch(error){
                 console.log(error.message);
@@ -29,14 +35,14 @@ const Order = () => {
                 }
             }
         }
-        getOrders();
+        getloveOrders();
 
     }, [])
     return (
         <div className='w-50 mx-auto'>
-    <h2>Your orders: {orders.length}</h2>
+    <h2>Your loveOrders: {loveOrders.length}</h2>
             {
-                orders.map(boxLove =><div key={boxLove._id}>
+                loveOrdersFilter.map(boxLove =><div key={boxLove._id}>
                       <div className='review-item'>
             <div>
                 <img src={boxLove.img} alt="" />
