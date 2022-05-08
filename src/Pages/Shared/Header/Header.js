@@ -5,10 +5,15 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, NavLink } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import logo from '../../../images/logo.png'
+import './Header.css'
 
 const Header = () => {
     const [user] = useAuthState(auth);
-    // console.log(user);
+    const handleDarkmode =()=>{
+        let element = document.body;
+        element.classList.toggle("dark-mode");
+    }
+
 
     const handleSignOut = () =>{
         signOut(auth);
@@ -50,7 +55,7 @@ const Header = () => {
             </a>
           <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
           
-
+             <li><button onClick={handleDarkmode}>Dark mode</button></li>
             <li><Link className='text-decoration-none text-dark' to={'/addservice'}>ManageInventories</Link></li>
             <li><hr className="dropdown-divider"/></li>
             <li>< button className='btn bg-danger text-white btn-link  text-decoration-none' onClick={handleSignOut}>Log out</button></li>
