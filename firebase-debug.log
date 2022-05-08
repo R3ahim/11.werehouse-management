@@ -1,0 +1,50 @@
+[debug] [2022-05-08T02:07:19.637Z] ----------------------------------------------------------------------
+[debug] [2022-05-08T02:07:19.637Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\bdbod\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-05-08T02:07:19.637Z] CLI Version:   10.6.0
+[debug] [2022-05-08T02:07:19.637Z] Platform:      win32
+[debug] [2022-05-08T02:07:19.637Z] Node Version:  v16.14.0
+[debug] [2022-05-08T02:07:19.653Z] Time:          Sun May 08 2022 08:07:19 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-05-08T02:07:19.653Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-05-08T02:07:19.653Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2022-05-08T02:07:19.840Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-05-08T02:07:19.840Z] > authorizing via signed-in user (itabdurrahim22@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\bdbod\Music\js-started\react-start\milestone-11\genius-car-service-client-deploy-module-69
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[debug] [2022-05-08T02:07:21.040Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2022-05-08T02:07:21.040Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-05-08T02:07:39.682Z] Using project from CLI flag: genius-car-services-18c77
+[debug] [2022-05-08T02:07:39.682Z] > refreshing access token with scopes: []
+[debug] [2022-05-08T02:07:39.682Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-05-08T02:07:40.151Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Sun, 08 May 2022 02:07:40 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-05-08T02:07:40.167Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/genius-car-services-18c77 [none]
+[debug] [2022-05-08T02:07:40.885Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/genius-car-services-18c77 403
+[debug] [2022-05-08T02:07:40.885Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/genius-car-services-18c77 {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2022-05-08T02:07:40.885Z] HTTP Error: 403, The caller does not have permission
+[debug] [2022-05-08T02:07:41.260Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at module.exports (C:\Users\bdbod\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:47:12)
+    at RetryOperation._fn (C:\Users\bdbod\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:286:39)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to get Firebase project genius-car-services-18c77. Please make sure the project exists and your account has permission to access it.
