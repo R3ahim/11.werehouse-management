@@ -2,7 +2,10 @@
 
 # LIVE WEBSITE  https://stock-marketing-521de.web.app
 # live server site https://lit-inlet-45861.herokuapp.com/
+
 # stockOverflow Q: https://stackoverflow.com/q/72154251/19030089
+
+## git repo server: https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-R3ahim
 
 
 ## Website created by
